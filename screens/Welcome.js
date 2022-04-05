@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
-
-
+import Login from './Login';
 import {
-
   InnerContainer,
   PageTitle,
   SubTitle,
@@ -12,40 +10,28 @@ import {
   ButtonText,
   WelcomeContainer,
   WelcomeImage,
-  Avatar
-  
-
-
+  Avatar,
 } from './../components/styles';
 
 const Welcome = () => {
-
   return (
     <>
       <StatusBar style="dark" />
-      <InnerContainer>
-   
-      
-
-        <WelcomeContainer> 
-          <Avatar resizeMode="cover" source={require('./../assets/images/logo.png')} /> 
-        <PageTitle welcome={true}>Welcome! Buddy</PageTitle>
-        <SubTitle welcome={true}>krismarfaria@gmail.com</SubTitle>       
-            <StyledFormArea>
-            
-              <StyledButton onPress={() => {}}>
-                <ButtonText>Logout</ButtonText>
-              </StyledButton>
-            
-           
-
-            </StyledFormArea>  
+      <Login />
+      {/* <InnerContainer>
+        <WelcomeContainer>
+          <Avatar resizeMode="cover" source={require('./../assets/images/logo.png')} />
+          <PageTitle welcome={true}>Welcome! Buddy</PageTitle>
+          <SubTitle welcome={true}>gasantaella@gmail.com</SubTitle>
+          <StyledFormArea>
+            <StyledButton onPress={() => {}}>
+              <ButtonText>Logout</ButtonText>
+            </StyledButton>
+          </StyledFormArea>
         </WelcomeContainer>
-      </InnerContainer>
+      </InnerContainer> */}
     </>
   );
 };
-
-
 
 export default Welcome;

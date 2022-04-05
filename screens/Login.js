@@ -23,10 +23,7 @@ import {
   ExtraText,
   ExtraView,
   TextLink,
-  TextLinkContent
-  
-
-
+  TextLinkContent,
 } from './../components/styles';
 
 const { brand, darkLight, primary } = Colors;
@@ -74,13 +71,13 @@ const Login = () => {
                 setHidePassword={setHidePassword}
               />
 
-<MsgBox></MsgBox>
+              <MsgBox></MsgBox>
               <StyledButton onPress={handleSubmit}>
                 <ButtonText>Login</ButtonText>
               </StyledButton>
-              <Line/>
+              <Line />
               <StyledButton google={true} onPress={handleSubmit}>
-                  <Fontisto name="google" color={primary} size={25} />
+                <Fontisto name="google" color={primary} size={25} />
                 <ButtonText google={true}>Sign in with Google</ButtonText>
               </StyledButton>
               <ExtraView>
