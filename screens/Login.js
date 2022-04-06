@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { Formik } from 'formik';
-import { View } from 'react-native';
 import { Octicons, Ionicons, Fontisto } from '@expo/vector-icons';
-
+import { View, Text, TextInput, TouchableOpacity } from 'react-native';
 import {
   StyledContainer,
   InnerContainer,
@@ -31,12 +30,12 @@ const { brand, darkLight, primary } = Colors;
 const Login = () => {
   const [hidePassword, setHidePassword] = useState(true);
   return (
-    <StyledContainer>
+    <View style={StyledContainer}>
       <StatusBar style="dark" />
-      <InnerContainer>
-        <PageLogo resizeMode="cover" source={require('./../assets/images/logo.png')} />
-        <PageTitle>RapitMatch</PageTitle>
-        <SubTitle>Account Login</SubTitle>
+      <View style={InnerContainer}>
+        {/* <View style={PageLogo} resizeMode="cover" source={require('./../assets/images/logo.png')} /> */}
+        <Text style={PageTitle}>RapitMatch</Text>
+        <Text style={SubTitle}>Account Login</Text>
 
         <Formik
           initialValues={{ email: '', password: '' }}
@@ -45,7 +44,7 @@ const Login = () => {
           }}
         >
           {({ handleChange, handleBlur, handleSubmit, values }) => (
-            <StyledFormArea>
+            <View style={StyledFormArea}>
               <MyTextInput
                 label="Email Address"
                 icon="mail"
@@ -71,41 +70,47 @@ const Login = () => {
                 setHidePassword={setHidePassword}
               />
 
-              <MsgBox></MsgBox>
-              <StyledButton onPress={handleSubmit}>
-                <ButtonText>Login</ButtonText>
-              </StyledButton>
-              <Line />
-              <StyledButton google={true} onPress={handleSubmit}>
-                <Fontisto name="google" color={primary} size={25} />
-                <ButtonText google={true}>Sign in with Google</ButtonText>
-              </StyledButton>
-              <ExtraView>
-                <ExtraText>Don't have an account alredy?</ExtraText>
-                <TextLink>
-                  <TextLinkContent>Signup</TextLinkContent>
-                </TextLink>
-              </ExtraView>
-            </StyledFormArea>
+              <View style={MsgBox}></View>
+              <TouchableOpacity style={StyledButton()} onPress={handleSubmit}>
+                <Text style={ButtonText}>Login</Text>
+              </TouchableOpacity>
+              <View style={Line} />
+              <TouchableOpacity style={StyledButton(true)} onPress={handleSubmit}>
+                <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'spaceAround', width: '100%' }}>
+                  <Text>
+                    <Fontisto name="google" color={primary} size={25} />
+                  </Text>
+                  <Text style={ButtonText} google={true}>
+                    Sign in with Google
+                  </Text>
+                </View>
+              </TouchableOpacity>
+              <View style={ExtraView}>
+                <Text style={ExtraText}>Don't have an account alredy?</Text>
+                <Text style={TextLink}>
+                  <Text style={TextLinkContent}>Signup</Text>
+                </Text>
+              </View>
+            </View>
           )}
         </Formik>
-      </InnerContainer>
-    </StyledContainer>
+      </View>
+    </View>
   );
 };
 
 const MyTextInput = ({ label, icon, isPassword, hidePassword, setHidePassword, ...props }) => {
   return (
     <View>
-      <LeftIcon>
+      <View style={LeftIcon}>
         <Octicons name={icon} size={25} color={brand} />
-      </LeftIcon>
-      <StyledInputLabel>{label}</StyledInputLabel>
-      <StyledTextInput {...props} />
+      </View>
+      <Text style={StyledInputLabel}>{label}</Text>
+      <TextInput style={StyledTextInput} {...props} />
       {isPassword && (
-        <RightIcon onPress={() => setHidePassword(!hidePassword)}>
+        <View style={RightIcon} onPress={() => setHidePassword(!hidePassword)}>
           <Ionicons name={hidePassword ? 'md-eye-off' : 'md-eye'} size={25} color={darkLight} />
-        </RightIcon>
+        </View>
       )}
     </View>
   );
