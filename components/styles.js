@@ -12,16 +12,16 @@ export const Colors = {
   red: '#ef4444',
 };
 
-const { primary, secondary, tertiary, darkLight, brand, green, red } = Colors;
+export const { primary, secondary, tertiary, darkLight, brand, green, red } = Colors;
 
 export const StyledContainer = {
   flex: 1,
   justifyContent: 'center',
   alignItems: 'center',
-  display: 'flex',
-  padding: '25px',
-  paddingTop: `${StatusBarHeight + 10}px`,
-  backgroundColor: `${primary}`,
+
+  padding: 25,
+  paddingTop: StatusBarHeight + 10,
+  backgroundColor: primary,
 };
 
 export const InnerContainer = {
@@ -33,43 +33,43 @@ export const InnerContainer = {
 };
 
 export const WelcomeContainer = {
-  padding: '25px',
-  paddingTop: '10px',
+  padding: 25,
+  paddingTop: 10,
   justifyContent: 'center',
 };
 
 export const PageLogo = {
-  width: '170px',
-  height: '120px',
-  borderRadius: '30px',
+  width: 170,
+  height: 120,
+  borderRadius: 30,
 };
 
 export const Avatar = {
-  width: '160px',
-  height: '160px',
-  marginBottom: '10px',
-  marginTop: '10px',
+  width: 160,
+  height: 160,
+  marginBottom: 10,
+  marginTop: 10,
 };
 
 export const WelcomeImage = {
-  height: '50%',
-  minHeight: '56%',
+  height: 50,
+  minHeight: 56,
 };
 
 export const PageTitle = {
-  fontSize: '30px',
+  fontSize: 30,
   textAlign: 'center',
   fontWeight: 'bold',
-  color: `${brand}`,
-  padding: '10px',
+  color: brand,
+  padding: 10,
 };
 
 export const SubTitle = {
-  fontSize: '18px',
-  marginBottom: '20px',
-  letterSpacing: '1px',
+  fontSize: 18,
+  marginBottom: 20,
+  letterSpacing: 1,
   fontWeight: 'bold',
-  color: `${tertiary}`,
+  color: tertiary,
 };
 
 export const StyledFormArea = {
@@ -78,77 +78,77 @@ export const StyledFormArea = {
 
 export const StyledTextInput = {
   backgroundColor: `${secondary}`,
-  padding: '15px',
-  paddingLeft: '55px',
-  paddingRight: '55px',
-  borderRadius: '50px',
-  fontSize: '15px',
-  height: '47px',
-  marginVertical: '3px',
-  marginBottom: '10px',
-  color: `${tertiary}`,
+  padding: 15,
+  paddingLeft: 55,
+  paddingRight: 55,
+  borderRadius: 50,
+  fontSize: 15,
+  height: 47,
+  marginVertical: 3,
+  marginBottom: 10,
+  color: tertiary,
 };
 
 export const StyledInputLabel = {
-  color: `${tertiary}`,
-  fontSize: '13px',
+  color: tertiary,
+  fontSize: 13,
   textAlign: 'left',
-  left: '15px',
+  left: 15,
 };
 export const LeftIcon = {
-  left: '15px',
-  top: '30px',
+  left: 15,
+  top: 30,
   position: 'absolute',
-  zIndex: '1',
+  zIndex: 1,
 };
 
 export const RightIcon = {
-  right: '15px',
-  top: '30px',
+  right: 15,
+  top: 30,
   position: 'absolute',
-  zIndex: '1',
+  zIndex: 1,
 };
 
 export const StyledButton = (google = false) => {
   return {
-    padding: '15px',
+    padding: 15,
     backgroundColor: `${!google ? brand : red}`,
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: '85px',
-    marginVertical: '5px',
-    height: '50px',
+    borderRadius: 85,
+    marginVertical: 5,
+    height: 50,
   };
 };
 
 export const ButtonText = {
-  color: `${primary}`,
-  fontSize: '16px',
+  color: primary,
+  fontSize: 16,
 };
 
 export const MsgBox = {
   textAlign: 'center',
-  fontSize: '13px',
+  fontSize: 13,
 };
 export const Line = {
-  height: '1px',
-  width: '100%',
+  height: 1,
+  width: 100,
   backgroundColor: '#dee2e6',
-  marginVertical: '10px',
+  marginVertical: 10,
 };
 
 export const ExtraView = {
   justifyContent: 'center',
   flexDirection: 'row',
   alignItems: 'center',
-  padding: '10px',
+  padding: 10,
 };
 
 export const ExtraText = {
   justifyContent: 'center',
   alignContent: 'center',
-  color: `${tertiary}`,
-  fontSize: '15px',
+  color: tertiary,
+  fontSize: 15,
 };
 
 export const TextLink = {
@@ -157,8 +157,8 @@ export const TextLink = {
 };
 
 export const TextLinkContent = {
-  color: `${brand}`,
-  fontSize: '15px',
-  paddingLeft: '6px',
+  color: brand,
+  fontSize: 15,
+  paddingLeft: 6,
   fontWeight: 'bold',
 };

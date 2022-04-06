@@ -71,12 +71,20 @@ const Login = () => {
               />
 
               <View style={MsgBox}></View>
-              <TouchableOpacity style={StyledButton()} onPress={handleSubmit}>
+              <TouchableOpacity style={StyledButton(false)} onPress={handleSubmit}>
                 <Text style={ButtonText}>Login</Text>
               </TouchableOpacity>
               <View style={Line} />
               <TouchableOpacity style={StyledButton(true)} onPress={handleSubmit}>
-                <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'spaceAround', width: '100%' }}>
+                <View
+                  style={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                    justifyContent: 'space-around',
+                    width: '30%',
+                    alignItems: 'center',
+                  }}
+                >
                   <Text>
                     <Fontisto name="google" color={primary} size={25} />
                   </Text>
