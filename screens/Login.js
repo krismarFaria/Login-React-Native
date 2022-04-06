@@ -116,9 +116,9 @@ const MyTextInput = ({ label, icon, isPassword, hidePassword, setHidePassword, .
       <Text style={StyledInputLabel}>{label}</Text>
       <TextInput style={StyledTextInput} {...props} />
       {isPassword && (
-        <View style={RightIcon} onPress={() => setHidePassword(!hidePassword)}>
+        <TouchableOpacity style={RightIcon} onPress={() => setHidePassword(!hidePassword)}>
           <Ionicons name={hidePassword ? 'md-eye-off' : 'md-eye'} size={25} color={darkLight} />
-        </View>
+        </TouchableOpacity>
       )}
     </View>
   );
